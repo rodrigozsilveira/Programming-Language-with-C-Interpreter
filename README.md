@@ -13,13 +13,13 @@ Make sure you have a C compiler installed.
 
 There are 3 example programs in (C--) already, but to run your own you have to:
 
- * Runs parser and lex
+ * Runs parser and lex.
 ```powershell
-flex lex.l
+flex lexer.l
 bison -d parser.y
 ```
 
- * Creates interpreter
+ * Creates interpreter.
 ```powershell
 gcc -o interpreter parser.tab.c lex.yy.c
 ```
@@ -29,7 +29,43 @@ gcc -o interpreter parser.tab.c lex.yy.c
 gcc output.c -o program
 program.exe
 ```
+ * The Interpreter can translate code like this:
+```powershell
+inicio
+inteiro x;
+x << 10;
+escreve(x);
+fim
+```
+```powershell
+#include <stdio.h>
 
+int main() {
+
+	int x;
+	x = 10;
+	printf("%d \n", x);
+
+	return 0;
+}
+```
+ * It also generates a .txt file containing all tokens used in the example:
+```powershell
+inicio -> T_INICIO
+inteiro -> T_TIPO_INT
+x -> VAR
+; -> T_PONTO_VIRGULA
+x -> VAR
+<< -> T_ATRIBUICAO
+10 -> DAT_INT
+; -> T_PONTO_VIRGULA
+escreve -> T_ESCREVE
+( -> T_ABRE_PAR
+x -> VAR
+) -> T_FECHA_PAR
+; -> T_PONTO_VIRGULA
+fim -> T_FIM
+```
 ## Development
 
 Project developed for Compilers (ECOM06A) class, by **Rodrigo Zaparoli Silveira** and **Luis Felipe de Moraes**.
