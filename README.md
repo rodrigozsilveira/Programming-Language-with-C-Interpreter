@@ -9,7 +9,7 @@ Bison : https://gnuwin32.sourceforge.net/packages/bison.htm
 ```
 Make sure you have a C compiler installed.
 
-## Program Execution
+## Program Execution (powershell)
 
 There are 3 example programs in (C--) already, but to run your own you have to:
 
