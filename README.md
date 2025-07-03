@@ -1,32 +1,29 @@
-# Criação de uma linguagem de programação "C--"
-Essa linguagem é baseada e intepretada em C, estamos usando o **bison** como analisador sintático e **FLEX** como analisador léxico.
+# Programming Language Project "C--"
+This language was based in c, we used **Bison** as the parser (syntax analyzer) and **FLEX** as the lexer (lexical analyzer).
 
-## Instalação das dependências necessárias
+## Dependencies
 
-```bash
-sudo apt-get update
-sudo apt-get install flex
-sudo apt-get install bison
-sudo apt-get install make
 ```
-Caso não tenha o compilador de C, pode instalar com ``sudo apt-get install gcc``.
-
-## Execução do programa
-
-Ja temos 3 exemplos de programas em c- - (C menos menos), mas se deseja criar o seu próprio programa crie um arquivo.txt e execute da seguinte forma:
-
- * Cria o interpretador
-```bash
-make all
+Flex : https://gnuwin32.sourceforge.net/packages/flex.htm
+Bison : https://gnuwin32.sourceforge.net/packages/bison.htm
 ```
- * Roda o interpretador e executa o programa final
-```bash
-make run ENTRADA=arquivo.txt
-make compile_output
-make execute
+Make sure you have a C compiler installed.
+
+## Program Execution
+
+There are 3 example programs in (C--) already, but to run your own you have to:
+
+ * Creates interpreter
+```powershell
+gcc -o interpreter parser.tab.c lex.yy.c
 ```
-Caso queira limpar os arquivos de intepretados e do programa gerado, faça ``make clean``.
+ * Runs the interpreter, compiles the translated code and runs it.
+```powershell
+.\interpreter example.txt
+gcc output.c -o program
+program.exe
+```
 
-## Desenvolvimento
+## Development
 
-Este trabalho foi desenvolvido para a matéria de ECOM06A, pelos alunos **Rodrigo Zaparoli Silveira** e **Luis Felipe de Moraes**.
+Project developed for Compilers (ECOM06A) class, by **Rodrigo Zaparoli Silveira** and **Luis Felipe de Moraes**.
