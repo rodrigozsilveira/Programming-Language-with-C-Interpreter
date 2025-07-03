@@ -1,0 +1,22 @@
+inicio
+    inteiro limite;
+    inteiro contador;
+    inteiro soma_pares;
+
+    limite << 10;
+    contador << 1;
+    
+    enquanto (contador <= limite) {
+        escreve(contador);
+	contador << contador + 1;
+    }
+    
+
+
+    inteiro i;
+
+    faca(i : 1 : 5) {
+        escreve(i);
+    }
+
+fim

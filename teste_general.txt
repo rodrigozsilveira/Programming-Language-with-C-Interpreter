@@ -1,0 +1,30 @@
+inicio
+    inteiro limite;
+    inteiro contador;
+    inteiro soma_pares;
+
+    limite << 20;
+    contador << 1;
+    soma_pares << 0;
+    
+    enquanto (contador <= limite) {
+        se ((contador md 2) = 0) {
+            soma_pares << soma_pares + contador;
+        }
+        
+        contador << contador + 1;
+    }
+    
+    escreve(soma_pares);
+
+
+    inteiro i;
+    inteiro limite2;
+    limite2 << 4;
+    faca(i : 1 : 10) {
+        se(limite2 < i) {
+		escreve(i);
+	}
+    }
+
+fim

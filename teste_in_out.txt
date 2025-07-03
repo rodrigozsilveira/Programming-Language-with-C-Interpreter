@@ -1,0 +1,14 @@
+inicio
+inteiro valor;
+valor<<5;
+escreve(valor);	
+
+real valor2;
+valor2<<5.32;
+escreve(valor2);	
+
+caracter leitura;
+leia(leitura);
+
+escreve(leitura);
+fim

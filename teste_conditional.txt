@@ -1,0 +1,55 @@
+inicio
+    inteiro numero; 
+    inteiro n1;
+    inteiro n0;
+    inteiro neg1;
+    
+
+    numero << -5;
+    
+
+    n1 << 1;
+    n0 << 0;
+    neg1 << -1;
+    escreve(numero);
+    se (numero > 0) {
+        escreve(n1);
+    } 
+    senao {
+        se (numero < 0) {
+            escreve(neg1);
+        } 
+        senao {
+            escreve(n0);
+        }
+    }
+
+    numero << 5;
+    escreve(numero);
+    se (numero > 0) {
+        escreve(n1);
+    } 
+    senao {
+        se (numero < 0) {
+            escreve(neg1);
+        } 
+        senao {
+            escreve(n0);
+        }
+    }
+    numero << 0;
+    escreve(numero);
+    se (numero > 0) {
+        escreve(n1);
+    } 
+    senao {
+        se (numero < 0) {
+            escreve(neg1);
+        } 
+        senao {
+            escreve(n0);
+        }
+    }
+
+    
+fim
