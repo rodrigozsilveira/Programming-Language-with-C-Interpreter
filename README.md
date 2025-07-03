@@ -13,11 +13,17 @@ Make sure you have a C compiler installed.
 
 There are 3 example programs in (C--) already, but to run your own you have to:
 
+ * Runs parses and lex
+```powershell
+flex lex.l
+bison -d parser.y
+```
+
  * Creates interpreter
 ```powershell
 gcc -o interpreter parser.tab.c lex.yy.c
 ```
- * Runs the interpreter, compiles the translated code and runs it.
+ * Runs the interpreter for desired txt example code, then compiles the translated code and runs it.
 ```powershell
 .\interpreter example.txt
 gcc output.c -o program
