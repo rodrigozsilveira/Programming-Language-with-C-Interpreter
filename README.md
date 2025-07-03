@@ -13,7 +13,7 @@ Make sure you have a C compiler installed.
 
 There are 3 example programs in (C--) already, but to run your own you have to:
 
- * Runs parses and lex
+ * Runs parser and lex
 ```powershell
 flex lex.l
 bison -d parser.y
