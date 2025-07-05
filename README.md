@@ -13,17 +13,17 @@ Make sure you have a C compiler installed.
 
 There are 3 example programs in (C--) already, but to run your own you have to:
 
- * CCreates parser and lex -> run this if changes are made to lexer.l or parser.y.
+ * Create parser and lex -> run this if changes are made to lexer.l or parser.y.
 ```powershell
 flex lexer.l
 bison -d parser.y
 ```
 
- * Creates interpreter -> skippable if no changes were made.
+ * Create interpreter -> skippable if no changes were made.
 ```powershell
 gcc -o interpreter parser.tab.c lex.yy.c
 ```
- * Runs the interpreter for desired txt example code, then compiles the translated code and runs it.
+ * Run the interpreter for desired txt example code, then compiles the translated code and runs it.
 ```powershell
 .\interpreter example.txt
 gcc output.c -o program
