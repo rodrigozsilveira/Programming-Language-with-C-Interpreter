@@ -29,7 +29,7 @@ gcc -o interpreter parser.tab.c lex.yy.c
 gcc output.c -o program
 program.exe
 ```
- * The Interpreter can translate code like this:
+ * The Interpreter translates code like this:
 ```powershell
 inicio
 inteiro x;
